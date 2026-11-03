@@ -1,4 +1,3 @@
-```markdown
 # Mission
 
 Implement TimeTrackerV2 incrementally from the approved specification.
@@ -88,11 +87,11 @@ Use quiet output; it is enough to see failures.
 
 # Git and PR
 
-- One branch per issue, from up-to-date `main`: `feature/<issue>-<short-slug>`,
-  e.g. `feature/3-single-active-access-request`. Docs/tooling: `docs/<slug>`, `chore/<slug>`.
+- One branch per issue, from up-to-date `main`: `feature/<feature-slug>-<NN>-<short-slug>`,
+  e.g. `feature/access-requests-03-single-active-access-request`. Docs/tooling: `docs/<slug>`, `chore/<slug>`.
 - Never commit to `main` directly.
-- Commit messages in English, imperative, with the issue number: `Add ... (#3)`.
-- PR: title = issue title, body starts with `Closes #<issue>` and contains
+- Commit messages in English, imperative, with the feature and ticket number: `Add ... (<feature-slug>/03)`.
+- PR: title = issue title, body starts with `Implements .scratch/<feature-slug>/issues/<NN>-<slug>.md` and contains
   the completion report (acceptance criteria → evidence table).
 - Windows PowerShell 5.1 breaks multi-line `git commit`/`gh` arguments:
   pass messages via a Bash heredoc or `--body-file`.
@@ -114,4 +113,13 @@ Stop and request human decision when:
 - a business rule is missing;
 - security semantics are unclear;
 - the implementation requires changing another issue's scope.
-```
+
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live as local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context: one `GLOSSARY.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
