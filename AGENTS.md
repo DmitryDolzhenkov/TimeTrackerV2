@@ -88,14 +88,14 @@ Use quiet output; it is enough to see failures.
 # Git and PR
 
 - One branch per issue, from up-to-date `main`: `feature/<feature-slug>-<NN>-<short-slug>`,
-  e.g. `feature/access-requests-03-single-active-access-request`. Docs/tooling: `docs/<slug>`, `chore/<slug>`.
+  e.g. `feature/timer-03-idle-detection`. Docs/tooling: `docs/<slug>`, `chore/<slug>`.
 - Never commit to `main` directly.
 - Commit messages in English, imperative, with the feature and ticket number: `Add ... (<feature-slug>/03)`.
 - PR: title = issue title, body starts with `Implements .scratch/<feature-slug>/issues/<NN>-<slug>.md` and contains
   the completion report (acceptance criteria → evidence table).
 - Windows PowerShell 5.1 breaks multi-line `git commit`/`gh` arguments:
   pass messages via a Bash heredoc or `--body-file`.
-- Never commit `.env` or secrets; the connection string lives in user-secrets.
+- Never commit `.env` or secrets.
 
 # Progress
 
