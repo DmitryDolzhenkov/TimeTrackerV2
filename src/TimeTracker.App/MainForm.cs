@@ -13,13 +13,13 @@ internal sealed class MainForm : Form
         _timer = timer;
 
         Text = "TimeTracker";
-        ClientSize = new Size(280, 170);
+        ClientSize = new Size(320, 200);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;
         StartPosition = FormStartPosition.CenterScreen;
 
-        var startButton = new Button { Text = "Старт", Location = new Point(16, 120), Size = new Size(120, 34) };
-        var stopButton = new Button { Text = "Стоп", Location = new Point(144, 120), Size = new Size(120, 34) };
+        var startButton = new Button { Text = "Старт", Location = new Point(16, 150), Size = new Size(120, 34) };
+        var stopButton = new Button { Text = "Стоп", Location = new Point(144, 150), Size = new Size(120, 34) };
         startButton.Click += (_, _) => Run(_timer.Start);
         stopButton.Click += (_, _) => Run(_timer.Stop);
         Controls.AddRange([_stateLabel, _dailySessionLabel, startButton, stopButton]);
